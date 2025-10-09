@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: html-index
-  namespace: html-demo
+  namespace: pipeline-project
 data:
   index.html: |
     <!DOCTYPE html>
@@ -11,7 +11,7 @@ data:
         <title>My OpenShift CRC HTML Pod</title>
     </head>
     <body style="text-align:center; margin-top:50px; font-family:sans-serif;">
-        <h1>🚀 Welcome to My OpenShift CRC HTML Pod!</h1>
+        <h1>🚀 Welcome to My OpenShift CRC HTML Pod!(Updated)</h1>
         <p>This is a sample HTML pod running in OpenShift CRC.</p>
     </body>
     </html>
@@ -20,7 +20,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: html-pod
-  namespace: html-demo
+  namespace: pipeline-project
 spec:
   replicas: 1
   selector:
@@ -59,7 +59,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: html-service
-  namespace: html-demo
+  namespace: pipeline-project
 spec:
   selector:
     app: html-pod
@@ -72,7 +72,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: html-route
-  namespace: html-demo
+  namespace: pipeline-project
 spec:
   to:
     kind: Service
