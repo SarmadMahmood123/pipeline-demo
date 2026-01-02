@@ -11,7 +11,7 @@ data:
         <title>My OpenShift CRC HTML Pod</title>
     </head>
     <body style="text-align:center; margin-top:50px; font-family:sans-serif;">
-        <h1>Welcome to My CI/CD Pipeline Automation OpenShift CRC Pod!</h1>
+        <h1>Welcome to My CI/CD Pipeline Automation OpenShift CRC Pod!(Updated)</h1>
         <p>This is a sample HTML pod running in OpenShift CRC has been updated.The pipeline is working along with jenkins</p>
     </body>
     </html>
